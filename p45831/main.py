@@ -247,7 +247,7 @@ def main():
 
 if __name__ == '__main__':
     p.confirm('请一定记住，终止本程序的方法为强行移动鼠标到屏幕最左上角!')
-    p.confirm('重要的事情说三遍:终止本程序的方法为强行移动鼠标到屏幕最左上角!')
+    p.confirm('Remember! You can exit this program by moving your mouse to the top left corner of the screen.')
     p.confirm('重要的事情说三遍:终止本程序的方法为强行移动鼠标到屏幕最左上角!')
     if p.confirm('现在请打开游戏，进入升级页面，然后点击ok')=='OK':
         main()

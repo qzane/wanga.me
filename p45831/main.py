@@ -145,7 +145,7 @@ def fight_result():
     if len(cv2_match(IMAGE['victory']))>0:
         result = 'victory'
     try:
-        ok = cv2_match(IMAGE['ok'])[0]
+        ok = cv2_match(IMAGE['ok'],0.9)[0]
         p.click(ok,pause=0.1)
     except p.FailSafeException:
         raise
@@ -154,8 +154,7 @@ def fight_result():
     return result
     
 def fight_attack():
-    p.moveTo(100,100)
-    sleep(1)
+    p.moveTo(100,100,pause=0.5)
     fight_force()
     fight_rate()    
     on_news()
@@ -210,12 +209,12 @@ def home_upgrade():
     on_news()
     p1 = cv2_match(IMAGE['home_glod_left'])[0]
     p2 = cv2_match(IMAGE['home_fist_right'])[0]
-    p.click(get_pos(p1,p2,HOME_L['damage']),clicks=20,pause=0.3)
+    p.click(get_pos(p1,p2,HOME_L['damage']),clicks=20,pause=0.5)
     p.click(get_pos(p1,p2,HOME_L['man_blood']),clicks=5,pause=0.2)
     p.click(get_pos(p1,p2,HOME_L['man']),clicks=50,pause=8)
-    p.click(get_pos(p1,p2,HOME_L['mine']),clicks=10,pause=0.3)
-    p.click(get_pos(p1,p2,HOME_L['units']),clicks=5,pause=0.2)
-    p.click(get_pos(p1,p2,HOME_L['level']),clicks=5,pause=0.3)
+    p.click(get_pos(p1,p2,HOME_L['mine']),clicks=10,pause=0.5)
+    p.click(get_pos(p1,p2,HOME_L['units']),clicks=5,pause=0.5)
+    p.click(get_pos(p1,p2,HOME_L['level']),clicks=5,pause=1)
     
     
 def toBattle():

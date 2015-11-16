@@ -1,7 +1,8 @@
 #script for "Immense Army"
 
-[game]
-[release]
+## content 
+* [game][s]
+* [release][r]
 
-[game]: http://http://wanga.me/45831
-[release]: https://github.com/qzane/wanga.me/releases
+[s]: http://http://wanga.me/45831
+[r]: https://github.com/qzane/wanga.me/releases

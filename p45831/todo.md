@@ -4,6 +4,7 @@
 
 * 
 总体结构应该是：
+``` python
 while(1):
     try:
         on_news()
@@ -11,7 +12,7 @@ while(1):
         pos.doSth()
     except:
         pass
-        
+```
 ## done
         
 * fight 部分

@@ -163,8 +163,6 @@ def fight_attack():
     p1 = cv2_match(IMAGE['fight_slave'],0.5)[0]
     p2 = cv2_match(IMAGE['home'])[0]
     AttackPos=get_pos(p1,p2,[0.5057803468208093, 0.4858420268256334])
-    #AttackPos[0]=p1[0]+int((p2[0]-p1[0])*0.483)
-    #AttackPos[1]=p1[1]-int((p1[1]-p2[1])*0.547)
     while(1): 
         on_news()
         begin = cv2_match(IMAGE['fight_begin'])
@@ -214,7 +212,7 @@ def home_upgrade():
     p2 = cv2_match(IMAGE['home_fist_right'])[0]
     p.click(get_pos(p1,p2,HOME_L['damage']),clicks=20,pause=0.3)
     p.click(get_pos(p1,p2,HOME_L['man_blood']),clicks=5,pause=0.2)
-    p.click(get_pos(p1,p2,HOME_L['man']),clicks=50,pause=1)
+    p.click(get_pos(p1,p2,HOME_L['man']),clicks=50,pause=8)
     p.click(get_pos(p1,p2,HOME_L['mine']),clicks=10,pause=0.3)
     p.click(get_pos(p1,p2,HOME_L['units']),clicks=5,pause=0.2)
     p.click(get_pos(p1,p2,HOME_L['level']),clicks=5,pause=0.3)

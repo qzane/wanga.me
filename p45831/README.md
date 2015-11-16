@@ -1,4 +1,7 @@
 #script for "Immense Army"
 
-##site: http://http://wanga.me/45831
+[game]
+[release]
 
+[game]: http://http://wanga.me/45831
+[release]: https://github.com/qzane/wanga.me/releases

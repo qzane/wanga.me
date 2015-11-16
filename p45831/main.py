@@ -161,10 +161,10 @@ def fight_attack():
     on_news()
     sleep(0.01)
     p1 = cv2_match(IMAGE['fight_slave'],0.5)[0]
-    p2 = cv2_match(IMAGE['fight_force'])[0]
-    AttackPos=[0,0]
-    AttackPos[0]=p1[0]+int((p2[0]-p1[0])*0.483)
-    AttackPos[1]=p1[1]-int((p1[1]-p2[1])*0.547)
+    p2 = cv2_match(IMAGE['home'])[0]
+    AttackPos=get_pos(p1,p2,[0.5057803468208093, 0.4858420268256334])
+    #AttackPos[0]=p1[0]+int((p2[0]-p1[0])*0.483)
+    #AttackPos[1]=p1[1]-int((p1[1]-p2[1])*0.547)
     while(1): 
         on_news()
         begin = cv2_match(IMAGE['fight_begin'])

@@ -67,9 +67,9 @@ def image_to_gray():
 
 def on_news():
     try:
-        while(len(cv2_match(IMAGE['ok']))>0 or len(cv2_match(IMAGE['news']))>0 or len(cv2_match(IMAGE['new']))>0):
+        while(len(cv2_match(IMAGE['ok'],0.9))>0 or len(cv2_match(IMAGE['news']))>0 or len(cv2_match(IMAGE['new']))>0):
             sleep(0.1)            
-            ok = cv2_match(IMAGE['ok'])[0]
+            ok = cv2_match(IMAGE['ok'],0.9)[0]
             p.click(ok,pause=0.1)
     except p.FailSafeException:
         raise
